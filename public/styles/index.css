@@ -1,0 +1,155 @@
+html {
+    min-height: 100%;
+    margin: 0;
+  
+
+}
+main{
+    color: black;
+    font-family: 'Exo 2', sans-serif;
+}
+
+::selection{
+    background: #FFDE6D;
+    color: black;
+}
+
+::-moz-selection{
+    background: #FFDE6D;
+}
+
+body {
+    max-width: 100%;
+    text-align: center;
+    min-height: 100%;
+    margin: 0;
+    background: linear-gradient(170deg, rgba(38,12,66,1) 0%, rgba(74,36,116,1) 50%,rgba(107,62,155,1), rgba(107,62,155,1) 100%);
+    
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+    object-fit: contain;
+}
+
+#logo {
+    padding: 15px 1vw 25px 1vw;
+    text-align: left;
+    display: grid;
+    grid-gap: 1fr;
+
+    
+}
+
+#main{
+
+    border-radius: 0px;
+    padding: 1px;
+    display: grid;
+    grid-gap: 5vmax;
+    text-align: center;
+
+}
+
+.topgrid1{
+    /*grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 15px 3vw 0px 3vw;
+    text-align: center;
+    align-content: flex-start;
+    vertical-align: text-bottom;
+    transition-duration: 0.4s;*/
+    visibility: hidden;
+}
+
+.topgrid2{
+    font-family: 'Exo 2', sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color:white;
+    text-align: center;
+    vertical-align: text-bottom;
+
+}
+
+.topgrid3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: right;
+    padding: 10px 3vmax 0px 15px;
+    vertical-align: text-bottom;
+    visibility: hidden;
+    transition-duration: 0.1s;
+}
+
+.text{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    padding: 10px 10px 0px 10px ;
+    font-weight: 300;
+    text-align: center;
+}
+.topgrid1text{
+    padding: 1vh;
+    visibility: visible;
+}
+
+.button{
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    background-color: #9BBA27;
+    border: none;
+    padding: 30px 64px; /* 15 32 */
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.button:hover {
+    background-color: #CAEB50;
+    color: black;
+}
+.logogrid{
+    width: 10vmax;
+}
+@media only screen and (max-width: 768px){
+    .topgrid1{
+        padding: 13px 0px 0px 3vw;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        padding: 15px 0px 0px 6vw;
+        text-align: left;
+        align-content: flex-start;
+        vertical-align: text-bottom;
+        visibility: visible;
+    }
+    .logogrid{
+        width: 50vmax;
+    }
+    .topgrid3{
+        visibility: visible;
+    }
+    .topgrid1text{
+        visibility: hidden;
+    }
+
+}
