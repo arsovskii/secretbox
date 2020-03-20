@@ -4,8 +4,10 @@ const app = express()
 const bodyParser = require(`body-parser`)
 const mysql = require('mysql');
 
-const PORT = 3000
+const PORT=(process.env.PORT || 3000);
 
+
+//db config and connection
 var dbconfig = {
     host: 'localhost',
     user: 'root',
@@ -28,7 +30,7 @@ conn.connect((err) =>{
 
 
 
-
+//url parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
@@ -36,6 +38,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
+//express server setup
 app.post('/static/registration.html', urlencodedParser , (req, res) =>{
     if(conn) conn.release;
     
@@ -51,7 +54,7 @@ app.post('/static/registration.html', urlencodedParser , (req, res) =>{
     res.send(`ime: ${name} mail: ${mail}`);
     
 })
-
+//insert data into db func
 function insertData(name, mail){
     console.log("brv");
     var sql = `INSERT INTO users (username, email) VALUES (${conn.escape(name)}, ${conn.escape(mail)})`;
